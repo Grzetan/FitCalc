@@ -1,0 +1,181 @@
+@import "_keyframes";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  .container{
+      background-color: #525252;
+      background-image: url(../resources/photos/backgroundDiet.png);
+      background-size: contain;
+      
+      .loader {
+        height: 100vh;
+        width: 100%;
+        background-color: #525252;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        animation: none;
+        z-index: 101;
+    
+        header {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+    
+          img {
+            width: 100px;
+            margin-left: 1%;
+          }
+    
+          h1 {
+            font-size: 70px;
+            color: white;
+          }
+        }
+    
+        .preloader {
+          width: 12px;
+          background: #ca3e47;
+          animation: animation 1s infinite ease-in-out;
+          margin: 65px auto 40px;
+          transform: translateZ(0);
+          animation-delay: -0.16s;
+    
+          &:before, &:after {
+            width: 12px;
+            background: #ca3e47;
+            animation: animation 1s infinite ease-in-out;
+          }
+    
+          &:before, &:after {
+            position: absolute;
+            content: '';
+          }
+    
+          &:before {
+            left: -20px;
+            animation-delay: -0.32s;
+          }
+    
+          &:after {
+            left: 20px;
+          }
+        }
+    
+        &.hidden {
+          animation: loadingPage 0.8s ease-in-out;
+          animation-delay: 2s;
+          animation-fill-mode: forwards;
+        }
+      }
+
+      header{
+        margin-left:23.5%;
+        padding: 2% 0 2% 0;
+
+          a{
+            display:flex;
+            text-decoration: none;
+            img {
+              width: 50px;
+              height: 50px;
+              margin-left: 1%;
+            }
+        
+            h1 {
+              font-size: 40px;
+              color: white;
+            }
+          }
+      }
+
+      main{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .materials{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1%;
+            a{
+              width: 100%;
+              height: 40%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-around;
+              transition-duration: .7s;
+              margin: 1%;
+              text-decoration: none;
+              color: white;
+
+              img{
+                  width: 15%;
+              }
+          }
+
+          a:hover{
+              -webkit-box-shadow: 0px 0px 74px 15px rgba(0,0,0,0.75);
+              -moz-box-shadow: 0px 0px 74px 15px rgba(0,0,0,0.75);
+              box-shadow:  0px 0px 74px 15px rgba(0,0,0,0.75);
+              border-radius: 15px;
+          }
+          }
+          .ytvideos{
+            width: 80%;
+            display: flex;
+            padding-bottom: 1%;
+            justify-content: space-around;
+            iframe{
+              width: 30vw;
+              height: 34vh;
+              margin: 1%;
+            }
+          }
+          h2{
+            color: #ca3e47;
+            width: 53%;
+          }
+          #center{
+            width: 10%;
+          }
+          article{
+            color: white;
+            width: 53%;
+            margin-top: 1%;
+            margin-bottom: 3%;
+            ul{
+                padding-left: 2%;
+            }
+            .fitatuimgs{
+                display: flex;
+                justify-content: space-around;
+                padding-top: 0.5em;
+                img{
+                    width: 25%;
+                    height: 25%;
+                }
+            }
+          }
+
+      }
+      footer{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+          color: #ca3e47;
+        }
+      }
+  }

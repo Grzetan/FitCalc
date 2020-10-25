@@ -1,0 +1,93 @@
+@keyframes fadeIn {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: translate(0%, -100vh);
+    background: #575757;
+  }
+  100% {
+    transform: translate(0%, 0vh);
+    background: #525252;
+  }
+}
+
+@keyframes fadeOutResult {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes animation {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0 #ca3e47;
+    height: 40px;
+  }
+  40% {
+    box-shadow: 0 -30px #ca3e47;
+    height: 80px;
+  }
+}
+
+@keyframes loadingPage {
+  100% {
+    visibility: hidden;
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes fadeOutResult {
+  0% {
+    transform: translateY(0vh);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+
+@keyframes fadeInSport {
+  0% {
+    transform: translateY(-100vh);
+  }
+  100% {
+    transform: translateY(0vh);
+  }
+}
+
+@keyframes fadeOutSport {
+  0% {
+    transform: translate(0%, 0vh);
+  }
+  100% {
+    transform: translate(0%, 100vh);
+  }
+}
+
+@keyframes nextPhoto {
+  0% {
+    transform: translate(0%, 0vh);
+  }
+  100% {
+    transform: translate(100%, 0vh);
+  }
+}
+
+@keyframes prevPhoto {
+  0% {
+    transform: translate(0%, 0vh);
+  }
+  100% {
+    transform: translate(-100%, 0vh);
+  }
+}

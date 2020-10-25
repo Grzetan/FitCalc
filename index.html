@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Author" content="Oskar Ukleja, Bartłomiej Papis, Grzegorz Paleta, Oliwier Gębczyński 2020">
+    <link rel="stylesheet" href="./style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="/resources/photos/calculator.png"/>
+    <title>FitCalc</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="loader" id="loader">
+            <header>
+                <h1>FitCalc</h1>
+                <img src="./resources/photos/calculator.png">
+            </header>
+            <div class="preloader"></div>
+        </section>
+
+        <section class="mainPage">
+            <header>
+                <h1>FitCalc</h1>
+                <img src="./resources/photos/calculator.png">
+            </header>
+            <main>
+                <article>
+                    <h2>WITAJ,</h2>
+                    <p>Zadbaj o swój stan zdrowia fizycznego!</p>
+                </article>
+                <a href="#sex" class="button-sex"><button>Zacznij</button></a>
+            </main>
+        </section>
+
+        <section class="sex" id="sex">
+            <button class="man" id="man"><a href="#form">Mężczyzna</a></button>
+
+            <button class="woman" id="woman"><a href="#form">Kobieta</a></button>
+        </section>
+
+        <section class="unActiveForm" id="form">
+            <main>
+                <a href="#sex" id="backToSex"><img src="./resources/photos/back.png"></a>
+                <form id="main-form">
+                    <input type="hidden" id='sex-form' value='0'>
+                    <label class="number">
+                        <input type="number" max="300" id="weight" required placeholder="Waga [kg]">
+                    </label>
+                    <label class="number">
+                        <input type="number" max="300" id="height" required placeholder="Wzrost [cm]">
+                    </label>
+                    <label class="number">
+                        <input type="number" max="100" id="age" required placeholder="Wiek">
+                    </label>
+                    <label class="number">
+                        <input type="number" max="200" id="obw" required placeholder="Obwód talii [cm]">
+                    </label>
+
+                    <label for="activity" class='form-label'>Aktywność</label>
+
+                    <select name="activity" class="numberSelect" id='activity'>
+                        <option value="0">Znikoma</option>
+                        <option value="1">Bardzo mała</option>
+                        <option value="2">Umiarkowana</option>
+                        <option value="3">Wysoka</option>
+                        <option value="4">Bardzo wysoka</option>
+                    </select>
+
+                    <input type="submit" id="submit" class="submit" value="Oblicz" href="#result">
+                </form>
+            </main>
+            <aside class="calc_txt">
+                <article>
+                    <h3>Czego się dowiesz od tego kalkulatora: </h3>
+                    <ul>
+                        <li>twój wskaźnik masy ciała (BMI);</li>
+                        <li>zawartość tłuszczu w organizmie (BF);</li>
+                        <li>dzienne zapotrzebowanie kaloryczne (BMR);</li>
+                    </ul>
+
+                    <h3>Legenda do aktywności: </h3>
+                    <ul>
+                        <li>Znikoma - Brak regularnych ćwiczeń, typowe dzienne zajęcia nie wymagające wysiłku
+                            fizycznego.</li>
+                        <li>Bardzo mała - Ćwiczenia raz w tygodniu, lekka praca. </li>
+                        <li>Umiarkowana - Ćwiczenia dwa razy w tygodnu, średnio fizyczna praca.</li>
+                        <li>Wysoka - Dość cięzkie treningi trzy razy w tygodniu.</li>
+                        <li>Bardzo wysoka - Minimum cztery razy w tygodniu trening, praca fizyczna. </li>
+                    </ul>
+                </article>
+            </aside>
+        </section>
+
+        <section id="results">
+            <h2>Oto twoje wyniki</h2>
+
+            <section class='results' id="bmi">
+                <div class="results-left">
+                    <h4 class='title'>BMI</h4>
+                    <div class="scale">
+                        <div class="true-scale" id="bmi-scale">
+                            <div class="pointer">
+                                <span class="scale-text">23%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="info">BMI to zależność między twoją wagą a twoim wzrostem.
+                    Wskaźnik powinien znajdować się w zielonej strefie, lecz BMI nie jest
+                    najlepszą formą kontrolowania swojego zdrowia, ponieważ nie bierze one pod uwage
+                    poziomu tkanki tłuszczowej.
+                </p>
+            </section>
+
+            <section class='results' id="bf">
+                <div class="results-left">
+                    <h4 class='title'>BF</h4>
+                    <div class="scale">
+                        <div class="true-scale" id="bfScale">
+                            <div class="pointer">
+                                <span class="scale-text">23%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="info">
+                    Poziom tkanki tłuszczowej bardzo dobrze określa
+                    poziom naszego zdrowia fizycznego. Jeśli wzkaźnik nie znajduje się
+                    w zielonej strefie powinieneś nabrać lub zgubić trochę tłuszczu.
+                </p>
+            </section>
+
+            <section class='results' id="bmr">
+                <div class="results-left">
+                    <h4 class='title'>BMR</h4>
+                    <div class="scale bmr">
+
+                    </div>
+                </div>
+                <p class="info">Twoje zapotrzebowanie kaloryczne to
+                    ilość kalorii, którą powinieneś jejść aby twoja waga stała w miejscu. Aby schudnąć powinieneś
+                    odjąć od podanej wartości między 200kcal a 500kcal.
+                </p>
+            </section>
+
+            <div id="what-next">
+                <a href="./diet.html" id="diet">dieta</a>
+                <a href="./workout.html" id="workout">trening</a>
+            </div>
+
+        </section>
+
+
+    </div>
+    <script src="./script/loader.js"></script>
+    <script src="./script/transitionSex.js"></script>
+    <script src="./script/calc.js"></script>
+    <script src="./script/ShowResults.js"></script>
+</body>
+
+</html>
